@@ -1,8 +1,9 @@
 #include<iostream>
 using namespace std;
 
-class AbstaksiKlas {
-private: string 
+class AbstraksiKlas {
+private: string x, y;
+
 public:
     void setXY(string a, string b) {
         x = a;
@@ -14,4 +15,12 @@ public:
         cout << "y = " << y << endl;
     }
 };
+
+int main() {
+    AbstraksiKlas ak;
+    ak.setXY("Yogyakarta", "Kampus");
+    ak.display();
+
+    return 0;
+}
 
