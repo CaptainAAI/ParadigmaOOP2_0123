@@ -1,52 +1,50 @@
-#include<iostream>
 using namespace std;
+#include <iostream>
 
 class orang {
 public:
-	int umur:
+    int umur;
 
-	orang(int pUmur) :
-		umur(pUmur)
-	{
-		cout << "pekerja dibuat\n" << endl;
-	}
+    orang(int pUmur) :
+        umur(pUmur)
+    {
+        cout << "orang dibuat dengan umur" << umur << "\n" << endl;
+    }
 };
 
 class pekerja : public orang {
 public:
 
-	pekerja(int pUmur) :
-		orang(pUmur)
-	{
-		cout << "Pekerja dibuat\n" << endl;
-	}
+    pekerja(int pUmur) :
+        orang(pUmur)
+    {
+        cout << "Pekerja dibuat\n" << endl;
+    }
 };
 
 class pelajar : public orang {
 public:
 
-	pelajar(int pUmur) :
-		orang(pUmur)
-	{
-		cout << "Pelajar dibuat\n" << endl;
-	}
+    pelajar(int pUmur) :
+        orang(pUmur)
+    {
+        cout << "Pelajar dibuat\n" << endl;
+    }
 };
 
 class budi : public pekerja, public pelajar {
 public:
 
-	budi(int pUmur) :
-		pekerja(pUmur),
-		pelajar(pUmur)
-	{
-		cout << "Budi dibuat\n" << endl;
-	}
+    budi(int pUmur) :
+        pekerja(pUmur),
+        pelajar(pUmur)
+    {
+        cout << "Budi dibuat\n" << endl;
+    }
 };
 
 int main() {
-	budi a(12);
+    budi a(12);
 
-	return 0;
+    return 0;
 }
-
-
